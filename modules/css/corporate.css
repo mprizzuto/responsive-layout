@@ -1,0 +1,187 @@
+* {
+	margin: 0;
+	padding: 0;
+	/*outline: 2px solid red;*/
+}
+
+/*setup*/
+picture {
+	display: block;
+}
+
+picture img {
+	display: block;
+	height: auto;
+	width: 100%;
+}
+
+.ad-image {
+	max-width: 100px;
+}
+
+.ad-image img {
+	border-radius: 50%;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	padding-bottom: 10vh;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+/*sections*/
+aside {
+	background: orange;
+}
+
+.corporate-theme inner-column {
+	display: flex;
+	/*outline: 3px solid red;*/
+	min-height: 40vh;
+	padding-top: 10vh;
+}
+
+.our-advertisers inner-column {
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	gap:  2em;
+}
+
+.hero-cta {
+	background: url("../images/hero-photo.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	min-height: 20vh;
+	/*outline:  2px solid red;*/
+	color: white;
+}
+
+.stories {
+	background: wheat;
+	min-height: 40vh;
+}
+
+.stories inner-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.stories span:first-of-type {
+	order: 1;
+}
+
+.stories p:first-of-type {
+	order:  3;
+}
+
+.stories p + .cta-link {
+	order: 4;
+}
+
+.stories h2 {
+	order:  2;
+}
+
+.stories  * {
+	margin-top: 10px;
+}
+
+/*componentst*/
+.hero-cta .cta-link {
+	margin-top: 40px;
+	text-align: center;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 1.3em;
+}
+
+.cta-link {
+	background: gray;
+	color:  white;
+	display: block;
+	padding: 1em;
+	max-width: 200px;
+	text-align: center;
+}
+
+/*typography*/
+h1, h2, h3 {
+	line-height: 1.3;
+	font-family: "trebuchet ms", sans-serif;
+}
+
+h1 {
+	font-size: clamp(1.8em, 3.5vw, 5em);
+}
+
+h1 span {
+	display: inline-block;
+}
+
+.stories span:first-of-type {
+	font-weight: bold;
+	font-size: .8em;
+	font-family: sans-serif;
+}
+
+p, li, a {
+	font-family: serif;
+}
+
+@media (min-width: 600px) {
+
+}
+
+@media(min-width: 900px) {
+	/*sections*/
+	campaign {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	campaign .stories, campaign aside {
+		flex-basis: 50vw;
+	}
+	.corporate-theme > inner-column {
+		/*outline:  10px double orange;*/
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		/*align-items: center;*/
+	}
+	.hero-cta .cta-link {
+		flex-basis: 150px;
+		font-size: 1em;
+		margin-top: 20px;
+	}
+	.welcome {
+		padding-top:  100px;
+	}
+	.cta-link {
+		display: block;
+	}
+	.welcome inner-column {
+		/*min-height: unset;*/
+	}
+	.stories {
+		order: 2;
+		width: 55vw;
+		position: absolute;
+		left:  45vw;
+	}
+}
+
+@media(min-width: 900px) {
+
+}
+
+
+

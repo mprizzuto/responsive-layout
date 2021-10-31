@@ -1,0 +1,191 @@
+@import "reset.css";
+@import "setup.css";
+@import "../modules/css/diptych-style.css";
+@import "../modules/css/corporate.css";
+@import "../modules/css/tech-finance.css";
+
+
+* {
+	/*outline:  3px solid red;*/
+	/*overflow: hidden;*/
+}
+
+inner-column, product,
+description, product-area, product-shelf {
+	display: block;
+}
+
+.logo {
+	max-width: 30px;
+}
+
+product picture {
+	max-width: 100px;
+}
+
+product picture img {
+	border-radius: 50%;
+	border:  4px solid black;
+}
+
+.product-figure picture {
+	max-width: 400px;
+}
+
+/*header styles*/
+header {
+	background: lightblue;
+}
+
+header nav.site-menu, .link-list {
+	display: flex;
+	align-items: center;
+	/*justify-content: space-between;*/
+}
+
+.link-list li {
+	margin: 10px;
+}
+
+/*sections*/
+main section {
+	min-height: 50vh;
+	padding-top: 30px;
+}
+
+inner-column {
+	padding:  30px 50px 30px 50px;
+	margin-right: auto;
+	margin-left: auto;
+	line-height: 2;
+	max-width: 950px;
+}
+
+.welcome, .welcome a {
+	background: blue;
+	color:  white;
+}
+
+.products {
+	background: wheat;
+	overflow: hidden;
+}
+
+/*decorative photos*/
+.decoration-photo {
+	display: none;
+	max-width: 300px;
+}
+
+figcaption a {
+	display: inline-block;
+}
+
+[aria-hidden="true"] {
+	display: none;
+}
+
+/*footer*/
+footer {
+	background: lightblue;
+}
+
+footer nav a, header li {
+	background: lightgray;
+	margin-top: 10px;
+	padding:  10px;
+}
+
+product-area {
+	background: lightblue;
+}
+
+@media (min-width:  600px) {
+	.products .wheel {
+		display: block;
+		max-width: 200px;
+		position: relative;
+		bottom:  200px;
+		left: 60vw;
+		/*border: 50px solid lime;*/
+		/*z-index: 2;*/
+	}
+	footer nav, product {
+		display: flex;
+	}
+	product {
+		/*justify-content: center;*/
+		align-items: center;
+		min-width: 300px;
+		min-width: 10vw;
+	}
+	footer nav a {
+		flex-basis: 300px;
+		margin-right: 10px;
+	}
+	.product-figure picture {
+		min-width: 300px;
+	}
+	.product-photo {
+		margin-right: 20px;
+		min-width: 80px;
+	}
+	description {
+		min-width: 160px;
+		padding:  10px;
+	}
+	.hero-diptych {
+		position: relative;
+		z-index: 1;
+	}
+	diptych figcaption {
+		margin-left: 20px;
+	}
+}
+
+@media (min-width:  900px) {
+	product-shelf {
+		display: flex;
+	}
+	.products .wheel {
+		left: 39px;
+		bottom:  0px;
+		/*z-index: 2;*/
+
+	}
+	.wheel {
+		display: block;
+	}
+	.decoration-photo {
+		display: block;
+		max-width: 300px;
+	}
+	.welcome .wheel {
+		order:  1;
+		/*border:  20px solid lime;*/
+		min-width: 180px;
+		position: absolute;
+		right:  100px;
+		top:  100px;
+		/*z-index: -1;*/
+		max-width: 200px;
+	}
+	.welcome .cloud {
+		/*display: block;*/
+		max-width: 200px;
+		/*border:  30px double lime;*/
+		/*order:  4;*/
+		z-index: -1;
+		position: absolute;
+		top:  130px;
+		left:  -90px;
+	}
+	.product-figure {
+		order:  2;
+	}
+	figcaption {
+		order: 3;
+	}
+}
+
+

@@ -1,0 +1,32 @@
+tech-news, tech-card {
+	display: block;
+	/*outline: 3px solid red;*/
+	line-height: 1.5;
+	padding:  10px;
+}
+
+tech-card picture {
+	max-width: 100px;
+}
+
+tech-card picture img {
+	border-radius: 50%;
+}
+
+strong {
+	font-weight: bolder;
+}
+
+tech-card picture + p {
+	margin-top: 10px;
+}
+
+.product-highlights {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	gap: 1.5em;
+}
+
+.product-highlights p {
+	max-width: 45ch;
+}
